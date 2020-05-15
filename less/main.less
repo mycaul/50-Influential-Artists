@@ -1,0 +1,100 @@
+.btn-mixin(@color: black, @bg-color: white) {
+    background-color: @bg-color;
+    color: @color;
+    width: 20rem;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  
+  .title-mixin {
+    border: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    height: 95vh;
+    color: white;
+  }
+  
+  .centered-mixin() {
+
+  }
+  
+  html {
+    font-size: 62.5%;
+    /*62.5% means that 10px = 1 rem */
+  }
+  
+  hr {
+    width: 80%;
+  }
+  
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/home.png");
+    .title-mixin();
+
+  
+    @media (max-width: 500px) {
+      width: 90%;
+    }
+  
+    .centered {
+      .centered-mixin();
+    }
+  
+    button {
+      .btn-mixin();
+    }
+  }
+  
+  .artists-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+    @media (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+    }
+  
+  
+    img:hover {
+      opacity: 0.5;
+    }
+  
+    .artist {
+      margin: 2rem 4rem 2rem 4rem;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+  
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+        margin: 2rem 0 2rem 0;
+        ;
+      }
+  
+      .bio {
+        font-size: 1.5rem;
+      }
+  
+      img {
+        border-radius: 0.5rem;
+        width: 100%;
+      }
+    }
+  }
